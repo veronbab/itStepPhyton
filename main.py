@@ -1,12 +1,27 @@
-class Student:
-    amount_of_students = 0
-    def __init__(self, height=160):
-        self.height = height
-        Student.amount_of_students += 1
+class Human:
+    def __init__(self, name="Human"):
+        self.name = name
 
-print(Student.amount_of_students)
-nick = Student()
-kate = Student(height=165)
-print(nick.amount_of_students)
-print(Student.amount_of_students)
+class Auto:
+    def __init__(self, brand):
+         self.brand = brand
+         self.passengers = []
 
+    def add_passengers(self, *args):
+        for human in args:
+            self.passengers.append(human)
+
+    def print_passengers_name(self):
+        if self.passengers != []:
+            print(f"Names of {self.brand}passengers:")
+            for passenger in self.passengers:
+                print(passenger.name)
+
+        else:
+            print("There are no passengers")
+
+nick = Human("Nick")
+kate = Human("Kate")
+car =  Auto("Reno Logan")
+car.add_passengers(nick, kate)
+car.print_passengers_name()
