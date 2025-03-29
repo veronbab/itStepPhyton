@@ -1,8 +1,12 @@
-class Student:
-    height = 160
-    def __init__(self):
-        print(self.height)
-        self.height += 10
-        print(self.height)
+class Human:
+    height = 170
+    satiety = 50
+class Student (Human):
+    satiety = 0
+class Worker(Human):
+    satiety = 100
+
 nick = Student()
-kate = Student()
+ann = Worker()
+print(nick.height)
+print(ann.height)
