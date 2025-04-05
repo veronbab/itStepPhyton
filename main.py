@@ -1,27 +1,18 @@
+import turtle
+
+print(turtle.__name__)
+tur = turtle
+print(tur.__name__)
+
+def first_func():
+    pass
+
 class Human:
-    def __init__(self, name="Human"):
-        self.name = name
+    pass
 
-class Auto:
-    def __init__(self, brand):
-         self.brand = brand
-         self.passengers = []
-
-    def add_passengers(self, *args):
-        for human in args:
-            self.passengers.append(human)
-
-    def print_passengers_name(self):
-        if self.passengers != []:
-            print(f"Names of {self.brand}passengers:")
-            for passenger in self.passengers:
-                print(passenger.name)
-
-        else:
-            print("There are no passengers")
-
-nick = Human("Nick")
-kate = Human("Kate")
-car =  Auto("Reno Logan")
-car.add_passengers(nick, kate)
-car.print_passengers_name()
+nick = Human
+print(first_func.__name__)
+print(Human.__name__)
+print(nick.__name__)
+num = 2
+print(num.__name__)
